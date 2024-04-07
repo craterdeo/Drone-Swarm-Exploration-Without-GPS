@@ -1,0 +1,287 @@
+{
+	"SeeDocsAt": "https://github.com/Microsoft/AirSim/blob/main/docs/settings.md",
+	"SettingsVersion": 1.2,
+	"SimMode": "Multirotor",
+	"ClockSpeed": 1,
+	"AutoCreate":true,
+	
+	"Vehicles": {
+		"Front_Drone": {
+		  "VehicleType": "SimpleFlight",
+		  "X": 8, "Y": 0, "Z": -2,
+		  "Roll": 0, "Pitch": 0, "Yaw" : 0,
+		  "Sensors":{
+			"Lidar1": {
+				"SensorType": 6,
+				"Enabled" : true,
+				"Range":10,
+				"DataFrame" :"VehicleInertialFrame",
+				"DrawDebugPoints": false,
+				"VerticalFOVUpper" : -5,
+				"VerticalFOVLower" : -15
+			},
+		  "Imu_f": {
+			"SensorType": 2,
+			"Enabled" : true,
+			"AngularRandomWalk": 0.3,
+			"GyroBiasStabilityTau": 500,
+			"GyroBiasStability": 4.6,
+			"VelocityRandomWalk": 0.24,
+			"AccelBiasStabilityTau": 800,
+			"AccelBiasStability": 36
+			}		  
+		}
+		},
+		"Left_Drone": {
+		  "VehicleType": "SimpleFlight",
+		  "X": 6, "Y": -2, "Z": -2,
+		  "Roll": 0, "Pitch": 0, "Yaw" : -90,
+		  "Sensors":{
+			"Lidar2": {
+				"SensorType": 6,
+				"Enabled" : true,
+				"Range":10,
+				"DataFrame" :"VehicleInertialFrame",
+				"DrawDebugPoints": false,
+				"VerticalFOVUpper" : -5,
+				"VerticalFOVLower" : -15
+			}
+			},
+		  "Imu_l": {
+			"SensorType": 2,
+			"Enabled" : true,
+			"AngularRandomWalk": 0.3,
+			"GyroBiasStabilityTau": 500,
+			"GyroBiasStability": 4.6,
+			"VelocityRandomWalk": 0.24,
+			"AccelBiasStabilityTau": 800,
+			"AccelBiasStability": 36
+		}
+		},
+		"Master_Drone": {
+			"VehicleType": "SimpleFlight",
+			"X": 6, "Y": 0, "Z": -2,
+			"Roll": 0, "Pitch": 0, "Yaw" : 0,
+			"Sensors":{
+				"Lidar3": {
+					"SensorType": 6,
+					"Enabled" : true,
+					"Range":10,
+					"DataFrame" :"VehicleInertialFrame",
+					"DrawDebugPoints": true,
+					"VerticalFOVUpper" : -5,
+					"VerticalFOVLower" : -25
+				}
+				,
+				"Imu_m": {
+                    "SensorType": 2,
+                    "Enabled" : true,
+                    "AngularRandomWalk": 0.3,
+                    "GyroBiasStabilityTau": 500,
+                    "GyroBiasStability": 4.6,
+                    "VelocityRandomWalk": 0.24,
+                    "AccelBiasStabilityTau": 800,
+                    "AccelBiasStability": 36
+                }
+			},
+				"Cameras":{
+					"front_left": {
+						"CaptureSettings": [
+							{
+								"ImageType":0,
+								"Width":672,
+								"Height":376,
+								"FOV_Degrees":90
+							}
+						],
+						"X": 8, "Y": -0.3, "Z": -2,
+						"Pitch": 0.0, "Roll": 0.0, "Yaw": 0.0
+					},
+					"front_right": {
+							"CaptureSettings": [
+								{
+									"ImageType":0,
+									"Width":672,
+									"Height":376,
+									"FOV_Degrees":90
+								}
+							],
+							"X": 8, "Y": 0.3, "Z": -2,
+							"Pitch": 0.0, "Roll": 0.0, "Yaw": 0.0
+					}
+				  },
+				  "SubWindows": [
+					{"WindowID": 0, "CameraName": "1", "ImageType": 5, "VehicleName": "Front_Drone", "Visible": false, "External": false},
+					{"WindowID": 1, "CameraName": "1", "ImageType": 5, "VehicleName": "Left_Drone", "Visible": false, "External": false}
+				  ]
+			},
+		"Right_Drone": {
+			"VehicleType": "SimpleFlight",
+			"X": 6, "Y": 2, "Z": -2,
+			"Roll": 0, "Pitch": 0, "Yaw" : 90,
+			"Sensors":{
+				"Lidar4": {
+					"SensorType": 6,
+					"Enabled" : true,
+					"Range":10,
+					"DataFrame" :"VehicleInertialFrame",
+					"DrawDebugPoints": false,
+					"VerticalFOVUpper" : -5,
+					"VerticalFOVLower" : -15
+				}
+				},
+			"Imu_r": {
+				"SensorType": 2,
+				"Enabled" : true,
+				"AngularRandomWalk": 0.3,
+				"GyroBiasStabilityTau": 500,
+				"GyroBiasStability": 4.6,
+				"VelocityRandomWalk": 0.24,
+				"AccelBiasStabilityTau": 800,
+				"AccelBiasStability": 36
+			}
+		},
+		"Back_Drone": {
+			"VehicleType": "SimpleFlight",
+			"X": 4, "Y": 0, "Z": -2,
+			"Roll": 0, "Pitch": 0, "Yaw" : 0,
+			"Sensors":{
+				"Lidar5": {
+					"SensorType": 6,
+					"Enabled" : true,
+					"Range":10,
+					"DataFrame" :"VehicleInertialFrame",
+					"DrawDebugPoints": false,
+					"VerticalFOVUpper" : -5,
+					"VerticalFOVLower" : -15
+				}
+				},
+			"Imu_b": {
+				"SensorType": 2,
+				"Enabled" : true,
+				"AngularRandomWalk": 0.3,
+				"GyroBiasStabilityTau": 500,
+				"GyroBiasStability": 4.6,
+				"VelocityRandomWalk": 0.24,
+				"AccelBiasStabilityTau": 800,
+				"AccelBiasStability": 36
+			}
+		}
+
+    }
+}
+
+// {
+//     "SeeDocsAt": "https://microsoft.github.io/AirSim/settings/",
+//     "SettingsVersion": 1.2,
+  
+//     "SimMode": "Multirotor",
+  
+//      "Vehicles": {
+//         "Drone1": {
+//             "VehicleType": "simpleflight",
+//             "AutoCreate": true,
+//             "Sensors": {
+//                 "LidarSensor1": {
+//                     "SensorType": 6,
+//                     "Enabled" : true,
+//                     "Range" :5,
+//                     "NumberOfChannels": 10,
+//                     "RotationsPerSecond": 10,
+//                     "PointsPerSecond": 100000,
+//                     "X": 0, "Y": 0, "Z": -1,
+//                     "Roll": 0, "Pitch": 0, "Yaw" : 0,
+//                     "VerticalFOVUpper": -15,
+//                     "VerticalFOVLower": -25,
+//                     "HorizontalFOVStart":-180,
+//                     "HorizontalFOVEnd": 180,
+//                     "DrawDebugPoints": true,
+//                     "DataFrame": "SensorLocalFrame"
+//                 },
+                
+                // "Imu": {
+                //     "SensorType": 2,
+                //     "Enabled" : true,
+                //     "AngularRandomWalk": 0.3,
+                //     "GyroBiasStabilityTau": 500,
+                //     "GyroBiasStability": 4.6,
+                //     "VelocityRandomWalk": 0.24,
+                //     "AccelBiasStabilityTau": 800,
+                //     "AccelBiasStability": 36
+                // },
+//                 "Gps": {
+//                     "SensorType": 3,
+//                     "Enabled" : true,
+//                     "EphTimeConstant": 0.9,
+//                     "EpvTimeConstant": 0.9,
+//                     "EphInitial": 25,
+//                     "EpvInitial": 25,
+//                     "EphFinal": 0.1,
+//                     "EpvFinal": 0.1,
+//                     "EphMin3d": 3,
+//                     "EphMin2d": 4,
+//                     "UpdateLatency": 0.2,
+//                     "UpdateFrequency": 50,
+//                     "StartupDelay": 1
+//                 }
+                
+//             }
+//         }
+//     },
+    
+//     "Drone2": {
+//         "VehicleType": "simpleflight",
+//         "AutoCreate": true,
+//         "Sensors": {
+//             "LidarSensor1": {
+//                 "SensorType": 6,
+//                 "Enabled" : true,
+//                 "Range" :5,
+//                 "NumberOfChannels": 10,
+//                 "RotationsPerSecond": 10,
+//                 "PointsPerSecond": 100000,
+//                 "X": 5, "Y": 0, "Z": -1,
+//                 "Roll": 0, "Pitch": 0, "Yaw" : 0,
+//                 "VerticalFOVUpper": -15,
+//                 "VerticalFOVLower": -25,
+//                 "HorizontalFOVStart":-180,
+//                 "HorizontalFOVEnd": 180,
+//                 "DrawDebugPoints": true,
+//                 "DataFrame": "SensorLocalFrame"
+//             },
+            
+//             "Imu": {
+//                 "SensorType": 2,
+//                 "Enabled" : true,
+//                 "AngularRandomWalk": 0.3,
+//                 "GyroBiasStabilityTau": 500,
+//                 "GyroBiasStability": 4.6,
+//                 "VelocityRandomWalk": 0.24,
+//                 "AccelBiasStabilityTau": 800,
+//                 "AccelBiasStability": 36
+//             },
+//             "Gps": {
+//                 "SensorType": 3,
+//                 "Enabled" : true,
+//                 "EphTimeConstant": 0.9,
+//                 "EpvTimeConstant": 0.9,
+//                 "EphInitial": 25,
+//                 "EpvInitial": 25,
+//                 "EphFinal": 0.1,
+//                 "EpvFinal": 0.1,
+//                 "EphMin3d": 3,
+//                 "EphMin2d": 4,
+//                 "UpdateLatency": 0.2,
+//                 "UpdateFrequency": 50,
+//                 "StartupDelay": 1
+//             }
+            
+//         }
+//     }
+//   }
+
+// ,
+// 		  "SubWindows": [
+// 			{"WindowID": 0, "CameraName": "0", "ImageType": 5, "VehicleName": "Front_Drone", "Visible": false, "External": false},
+// 			{"WindowID": 1, "CameraName": "1", "ImageType": 5, "VehicleName": "Front_Drone", "Visible": false, "External": false}
+// 		  ]
